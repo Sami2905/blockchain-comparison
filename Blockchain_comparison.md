@@ -1,0 +1,12 @@
+## Blockchain Platform Comparison
+
+| Blockchain Name      | Type       | Consensus Mechanism | Permission Model | Throughput (TPS) | Smart Contracts (Language) | Token Support         | Typical Use Case                         | Notable Feature                      |
+|----------------------|------------|---------------------|------------------|------------------|----------------------------|-----------------------|-------------------------------------------|--------------------------------------|
+| **Ethereum**         | Public     | PoS (Casper)        | Open             | ~30              | Yes (Solidity, Vyper)      | Native (ETH)          | Decentralized applications (DeFi, NFTs) | Turing-complete VM (EVM)             |
+| **Hyperledger Fabric** | Private    | Pluggable (PBFT)    | Permissioned     | 1,000–3,500      | Yes (Go, Java, JavaScript) | No (requires tokenization chaincode) | Enterprise supply chain, asset tracking | Channel-based data privacy           |
+| **R3 Corda**         | Consortium | Notary (RBFT)       | Permissioned     | ~200             | Yes (Kotlin, Java)          | No (token SDK available) | Inter-bank settlements, trade finance   | UTXO model for privacy               |
+
+
+Across the three platforms, **Ethereum** excels at public, censorship-resistant applications, thanks to its global validator set and fully programmable EVM. Its lower throughput and higher fees, however, make it less suited to high-volume private transactions. **Hyperledger Fabric** addresses enterprise needs with pluggable consensus and strict access control; channels allow sub-groups of participants to share data confidentially, driving throughput into the thousands of TPS. In contrast, **R3 Corda** targets financial institutions with point-to-point transactions via a notary service, offering strong privacy guarantees through a UTXO-based ledger, albeit at modest TPS compared to Fabric.
+
+For a **decentralized app**, Ethereum’s broad developer tooling and established ecosystem make it the clear choice. A **supply chain network among known partners** benefits most from Hyperledger Fabric’s permissioned channels and high throughput. Finally, an **inter-bank financial application** requires Corda’s fine-grained privacy, legal prose integration, and deterministic notary, ensuring only involved parties see transaction details while maintaining regulatory auditability.
